@@ -1,0 +1,185 @@
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1050px;
+  height: 38px;
+  margin: 0 auto;
+  .delivery {
+    width: 121px;
+    height: 22px;
+
+    a {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .nav__menu {
+    display: flex;
+
+    > li {
+      position: relative;
+      padding: 0 12px;
+      font-size: 12px;
+      list-style: none;
+      cursor: pointer;
+
+      &:not(:last-of-type)::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 12px;
+        transform: translateY(-50%);
+        background-color: rgb(211, 210, 211);
+      }
+      &:last-of-type::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 8px;
+        height: 5px;
+        background: url(https://res.kurly.com/pc/ico/1908/ico_down_8x5.png) no-repeat 0 0;
+        transform: translateY(-50%);
+      }
+      .signUpColor {
+        color: #5f0080;
+      }
+    }
+  }
+}
+
+
+.Nav__layout {
+  display: flex;
+  flex-direction: column;
+
+
+  .second__layout {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 103px;
+    }
+  }
+
+  .third__layout {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+
+    .cate__layout {
+      display: flex;
+      align-items: center;
+
+      .catergoryHover:hover {
+        color: blueviolet;
+        text-decoration: underline;
+        text-underline-position: under;
+      }
+
+      li {
+        position: relative;
+        margin-right: 58px;
+        list-style: none;
+        color: black;
+        text-decoration: none;
+        font-size: 17px;
+
+        .allCategoryHover:hover {
+          color: blueviolet;
+        }
+
+        .allCategoryHover {
+          i {
+            margin-right: 10px;
+          }
+          span {
+            margin-right: 5px;
+          }
+        }
+
+        .dropDownMenu {
+          position: absolute;
+          margin-top: 22px;
+          border: 1px solid rgb(246, 246, 246);
+          z-index: 999;
+          background-color: white;
+          width: 200px;
+
+          .dropDownMenuList {
+            font-size: 14px;
+
+            .dropDownMenuListMain {
+              width: 120%;
+              margin-left: 12px;
+              margin-top: 7px;
+              line-height: 3;
+            }
+          }
+
+          .dropDownNext {
+            width: 175px;
+            margin-left: 30px;
+            background-color: rgb(246, 246, 246);
+            font-size: 14px;
+
+            .dropDownMenuListSub {
+              margin-left: 12px;
+              margin-top: 7px;
+              line-height: 3;
+            }
+          }
+        }
+      }
+    }
+
+    .thirdLayoutIcon {
+      display: flex;
+
+      .searchBar {
+        position: relative;
+        width: 200px;
+        height: 37px;
+        margin-right: 33px;
+        border-radius: 21px;
+        border: none;
+        background-color: #f7f7f7;
+
+        i {
+          position: absolute;
+          right: 0;
+          bottom: 11px;
+        }
+
+        input {
+          width: 100%;
+          height: 100%;
+          margin-left: 17px;
+          border: none;
+          border-radius: 21px;
+          background-color: #f7f7f7;
+          outline: none;
+        }
+      }
+
+      a {
+        margin: 6px 25px 0 0;
+        i {
+          color: black;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}

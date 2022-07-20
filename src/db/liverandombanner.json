@@ -1,0 +1,40 @@
+{
+  "randombanner": [
+    {
+        "id": "7",
+        "backgroundColor": "#F7F7F7",
+        "textColor": "#333333",
+        "title": "",
+        "subtitle": "",
+        "imageUrl": "https://img-cf.kurly.com/banner/random-band/pc/img/8ded70f9-bca2-4a70-b290-beb571ff82ab",
+        "link": "https://www.kurly.com/shop/board/view.php?id=notice&no=64"
+    },
+    {
+      "id": "259",
+      "backgroundColor": "#F7F7F7",
+      "textColor": "#333333",
+      "title": "",
+      "subtitle": "",
+      "imageUrl": "https://img-cf.kurly.com/banner/random-band/pc/img/5af6e4db-fc7b-44d7-bc84-08db949769f6",
+      "link": "https://www.kurly.com/shop/goods/goods_list.php?category=610"
+    },
+    {
+      "id": "99",
+      "backgroundColor": "#F7F7F7",
+      "textColor": "#333333",
+      "title": "",
+      "subtitle": "",
+      "imageUrl": "https://img-cf.kurly.com/banner/random-band/pc/img/e794055a-a3ce-436c-9998-62495971b580",
+      "link": "https://www.kurly.com/shop/main/html.php?htmid=event/kurly.htm&name=basket"
+    },
+    {
+      "id": "253",
+      "backgroundColor": "#F7F7F7",
+      "textColor": "#333333",
+      "title": "",
+      "subtitle": "",
+      "imageUrl": "https://img-cf.kurly.com/banner/random-band/pc/img/23bfd7e8-2bcd-4ca5-822d-e79641ae818a",
+      "link": "https://www.kurly.com/shop/goods/goods_list.php?category=080"
+    }
+  ]
+}

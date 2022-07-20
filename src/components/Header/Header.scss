@@ -1,0 +1,231 @@
+header {
+  .Header__msg {
+    position: relative;
+    min-width: 1050px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    background-color: #5f0080;
+    &.-close {
+      animation: MsgHide .3s linear forwards;
+        @keyframes MsgHide { 100% { margin-top: -42px;}}
+      }
+    a {
+      position: relative;
+      display: block;
+      width: 1050px;
+      height: 42px;
+      margin: 0 auto;
+      font-weight: 500;
+      color: #fff;
+      .ico__arr {
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        vertical-align: top;
+      }
+    }
+    .ico__close {
+      position: absolute;
+      bottom: 0;
+      right: -15px;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      text-indent: -9999px;
+      background-image: url(https://res.kurly.com/pc/ico/1908/ico_close_fff_84x84.png);
+      background-size: 42px 42px;
+      background-color: transparent;
+    }
+  }
+  .Header__logo {
+    position: relative;
+    width: 1050px;
+    height: 63px;
+    margin: 0 auto;
+    .logo {
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+      width: 100%;
+      height: 79px;
+      text-align: center;
+      img {
+        width: 103px;
+      }
+    }
+  }
+  
+  .Header__gnb {
+    position: relative;
+    z-index: 300;
+    .Header-fixed__wrap {
+      background-color: #fff;
+      &.-fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 299;
+          left: 0;
+          top: 56px;
+          width: 100%;
+          height: 9px;
+          background: url(https://res.kurly.com/pc/service/common/1902/bg_1x9.png) repeat-x 0 100%;
+        }
+      }
+      .Header-gnb__wrap {
+        position: relative;
+        width: 1050px;
+        height: 56px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        > ul {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          > li {
+            position: relative;
+            width: 116px;
+            height: 100%;
+            line-height: 56px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            &:first-of-type {
+              width: 148px;
+            }
+            > a {
+              display: block;
+              width: 100%;
+              &:hover span {
+                color: #5f0080;
+                border-bottom: 1px solid #5f0080;
+              }
+  
+              .Header-gnb__ico {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 16px;
+                height: 14px;
+                background: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all_off_x2.png) no-repeat 0 0;
+                background-size: 16px 14px;
+                transform: translateY(-50%);
+              }
+              &:hover .Header-gnb__ico {
+                background-image: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all_x2.png);
+              }
+            }
+  
+            .Gnb-sub__menu {
+              position: absolute;
+              top: 55px;
+              z-index: 100;
+              .Gnb-sub__List {
+                width: 220px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                > ul {
+                  > li {
+                    height: 39px;
+                    color: #333;
+                    font-size: 14px;
+                    font-weight: 400;
+                    &:hover {
+                      background-color: #f7f7f7;
+                      .Gnb-sub__name {
+                        color: #5f0080;
+                        font-weight: 700;
+                      }
+                      .Gnb-sub__ico {
+                        img {
+                          &.on { display: none;}
+                          &.off { display: block;}
+                        }
+                      }
+                    }
+                    > a {
+                      display: flex;
+                      align-items: center;
+                      width: 100%;
+                      height: 100%;
+                      padding: 0 14px;
+                      text-align: left;
+    
+                      .Gnb-sub__ico {
+                        flex-shrink: 0;
+                        width: 24px;
+                        height: 24px;
+                        img {
+                          width: 24px;
+                          height: 24px;
+                          vertical-align: top;
+    
+                          &.on {}
+                          &.off {
+                            display: none;
+                          }
+                        }
+                      }
+                  
+                      .Gnb-sub__name {
+                        height: 100%;
+                        line-height: 42px;
+                        padding-left: 10px;
+                      }
+                    }
+                  }
+                }
+  
+              }
+  
+            }
+            .Gnb-sub-in__menu {
+              position: absolute;
+              top: 0;
+              left: 219px;
+              width: 248px;
+              height: 100%;
+              border: 1px solid #ddd;
+              border-left: none;
+              background: #f7f7f7;
+              opacity: 0;
+              transition: opacity 0.2s;
+              > li {
+                width: 100%;
+                text-align: left;
+                &:first-of-type {
+                  padding-top: 11px;
+                }
+                &:hover span {
+                  color: #5f0080;
+                  font-weight: 600;
+                  border-bottom: 1px solid #5f0080;
+                }
+                > a {
+                  display: block;
+                  height: 40px;
+                  color: #333;
+                  font-size: 14px;
+                  line-height: 18px;
+                  padding-left: 20px;
+                }
+              }
+            }
+            .current .Gnb-sub-in__menu {
+              z-index:1;
+              opacity:1;
+              transition:opacity 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
