@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header/Header";
 // import SignUp from "./pages/SignUp/SignUp";
 // import Login from "./pages/Login/Login";
-import Main from "./pages/Main/Main";
+import Main from "./pages/Main";
 // import Detail from "./pages/Detail/Detail";
-// import Cart from "./pages/Cart/Cart";
+import Cart from "./pages/Cart";
 import Footer from "./components/Footer/Footer";
 import ScrollReset from "./components/ScrollReset";
 
@@ -16,9 +16,12 @@ function App() {
       <BrowserRouter>
         <Header />
         <div id="content">
-          <Routes>
-            <Route path="/" element={<Main />}></Route>
-          </Routes>
+          <div id="main">
+            <Routes>
+              <Route path="/" element={<Main />}></Route>
+              <Route path="/cart" exact element={<Cart />} />
+            </Routes>
+          </div>
         </div>
         <Footer/>
         <ScrollReset />

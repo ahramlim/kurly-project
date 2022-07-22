@@ -21,7 +21,7 @@
       }
     }
     .menu {
-      border: 1px solid #ddd;
+      border: 1px solid var(--lightgray);
       background-color: #fff;
       a {
         display: block;
@@ -29,7 +29,7 @@
         padding-top: 5px;
         text-align: center;
         &:not(:first-of-type) {
-          border-top: 1px solid #ddd;
+          border-top: 1px solid var(--lightgray);
         }
         &:hover {
           color: #5f0080;

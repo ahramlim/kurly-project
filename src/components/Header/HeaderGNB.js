@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { KURLY_API } from "../../config";
 
-const HeaderGNB = () => {
+const HeaderGnb = () => {
   const [isDropDown, setIsDropDown] = useState(false);
   const [isDropDownNext, setIsDropDownNext] = useState(false);
   const [itemList, setItemList] = useState([]);
@@ -22,13 +22,8 @@ const HeaderGNB = () => {
     }
   }, []) //빈배열을 선언하세요!
 
-
-  const onMouseEnterMenu = () => {
-    setIsDropDown(true);
-  }
-  const onMouseLeaveMenu = () => {
-    setIsDropDown(false);
-  }
+  const onMouseEnterMenu = () => setIsDropDown(true);
+  const onMouseLeaveMenu = () => setIsDropDown(false);
 
   const handleClass = idx => {
     setIsActive(isActive.map((element, index) => {
@@ -42,11 +37,14 @@ const HeaderGNB = () => {
     if (!subCategory) return [];
     return subCategory.categories;
   }
+  const CATEGORY = ["신상품", "베스트", "알뜰쇼핑", "특가/혜택"];
+
   return (
-    <li
-      onMouseEnter={onMouseEnterMenu}
-      onMouseLeave={onMouseLeaveMenu}
-    >
+    <ul>
+      <li
+        onMouseEnter={onMouseEnterMenu}
+        onMouseLeave={onMouseLeaveMenu}
+      >
       <Link to="#none">
         <i className="Header-gnb__ico"></i>
         <span>전체 카테고리</span>
@@ -89,7 +87,7 @@ const HeaderGNB = () => {
                   </Link>
 
                   <ul
-                    className="Gnb-sub-in__menu"
+                    className="Lbn__menu"
                     style={{ display: isDropDownNext ? 'block' : 'none' }}
                     onMouseEnter={() => {
                       setCurrentNo(currentNo);
@@ -101,7 +99,7 @@ const HeaderGNB = () => {
                       return (
                         <li
                           key={subList.no}
-                          className={isDropDownNext ? 'on' : 'off'}
+                          className={isDropDownNext && 'on'}
                         >
                           <Link to="#none">
                             <span>{subList.name}</span>
@@ -116,9 +114,19 @@ const HeaderGNB = () => {
           </ul>
         </div>
       </div>
-    </li>
+      </li>
+    {CATEGORY.map((category, index) => {
+      return (
+        <li key={index}>
+          <Link to="#">
+            <span>{category}</span>
+          </Link>
+        </li>
+      )
+    })}
+    </ul>
   )
 }
 
 
-export default HeaderGNB;
+export default HeaderGnb;

@@ -1,12 +1,12 @@
 import React from "react";
 import axios from 'axios';
-import useAsync from '../../../useAsync';
+import useAsync from '../../useAsync';
 
-import { RANDOM_BANNER_API } from '../../../config';
+import { API } from '../../config';
 import './Card.scss'
 
 async function getRandomBanner() {
-  const response = await axios.get(RANDOM_BANNER_API);
+  const response = await axios.get(API+'randombanner');
   return response.data;
 }
 

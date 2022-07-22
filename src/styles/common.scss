@@ -1,7 +1,13 @@
+:root {
+  --maincolor: #5f0080;
+  --gray: #999;
+  --gray2: #666;
+  --darkgray: #333;
+  --lightgray: #ddd;
+}
 * {
   box-sizing: border-box;
 }
-
 body {
   font-size: 13px;
 }
@@ -18,6 +24,11 @@ body, input, select, textarea, button {
 }
 div, th, td, li, dt, dd, p {
   word-break: break-all;
+}
+::placeholder { color: #C1C1C1; }
+#main {
+  position: relative;
+  height: 100vh;
 }
 /* 접근성에 문제 없음 */
 .blind {

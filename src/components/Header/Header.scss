@@ -1,11 +1,12 @@
 header {
+  z-index: 300;
   .Header__msg {
     position: relative;
     min-width: 1050px;
     text-align: center;
     line-height: 42px;
     font-size: 14px;
-    background-color: #5f0080;
+    background-color: var(--maincolor);
     &.-close {
       animation: MsgHide .3s linear forwards;
         @keyframes MsgHide { 100% { margin-top: -42px;}}
@@ -44,9 +45,8 @@ header {
     height: 63px;
     margin: 0 auto;
     .logo {
-      position: absolute;
-      left: 0;
-      bottom: 6px;
+      position: relative;
+      top: -23px;
       width: 100%;
       height: 79px;
       text-align: center;
@@ -58,32 +58,35 @@ header {
   
   .Header__gnb {
     position: relative;
-    z-index: 300;
+    &.__scroll {
+      height: 56px;
+    }
     .Header-fixed__wrap {
       background-color: #fff;
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 299;
+        left: 0;
+        top: 56px;
+        width: 100%;
+        height: 9px;
+        background: url(https://res.kurly.com/pc/service/common/1902/bg_1x9.png) repeat-x 0 100%;
+      }
       &.-fixed {
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
-        &::after {
-          content: "";
-          position: absolute;
-          z-index: 299;
-          left: 0;
-          top: 56px;
-          width: 100%;
-          height: 9px;
-          background: url(https://res.kurly.com/pc/service/common/1902/bg_1x9.png) repeat-x 0 100%;
-        }
       }
-      .Header-gnb__wrap {
+      .Header-gnb__Wrapper {
         position: relative;
         width: 1050px;
         height: 56px;
         margin: 0 auto;
         display: flex;
         align-items: center;
+        z-index: 300;
         > ul {
           display: flex;
           align-items: center;
@@ -93,7 +96,7 @@ header {
             width: 116px;
             height: 100%;
             line-height: 56px;
-            color: #333;
+            color: var(--darkgray);
             font-size: 16px;
             font-weight: 600;
             text-align: center;
@@ -104,8 +107,8 @@ header {
               display: block;
               width: 100%;
               &:hover span {
-                color: #5f0080;
-                border-bottom: 1px solid #5f0080;
+                color: var(--maincolor);
+                border-bottom: 1px solid var(--maincolor);
               }
   
               .Header-gnb__ico {
@@ -129,8 +132,9 @@ header {
               z-index: 100;
               .Gnb-sub__List {
                 width: 220px;
+                height: 100%;
                 background-color: #fff;
-                border: 1px solid #ddd;
+                border: 1px solid var(--lightgray);
                 > ul {
                   > li {
                     height: 39px;
@@ -140,7 +144,7 @@ header {
                     &:hover {
                       background-color: #f7f7f7;
                       .Gnb-sub__name {
-                        color: #5f0080;
+                        color: var(--maincolor);
                         font-weight: 700;
                       }
                       .Gnb-sub__ico {
@@ -186,13 +190,13 @@ header {
               }
   
             }
-            .Gnb-sub-in__menu {
+            .Lbn__menu {
               position: absolute;
               top: 0;
               left: 219px;
               width: 248px;
               height: 100%;
-              border: 1px solid #ddd;
+              border: 1px solid var(--lightgray);
               border-left: none;
               background: #f7f7f7;
               opacity: 0;
@@ -204,21 +208,21 @@ header {
                   padding-top: 11px;
                 }
                 &:hover span {
-                  color: #5f0080;
+                  color: var(--maincolor);
                   font-weight: 600;
-                  border-bottom: 1px solid #5f0080;
+                  border-bottom: 1px solid var(--maincolor);
                 }
                 > a {
                   display: block;
                   height: 40px;
-                  color: #333;
+                  color: var(--darkgray);
                   font-size: 14px;
                   line-height: 18px;
                   padding-left: 20px;
                 }
               }
             }
-            .current .Gnb-sub-in__menu {
+            .current .Lbn__menu {
               z-index:1;
               opacity:1;
               transition:opacity 0.5s;

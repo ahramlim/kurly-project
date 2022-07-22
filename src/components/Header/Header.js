@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import HeaderNavigation from "./HeaderNavigation";
-import HeaderGNB from "./HeaderGNB";
-import HeaderMenuCategory from "./HeaderMenuCategory";
+import HeaderNav from "./HeaderNav";
+import HeaderGnb from "./HeaderGnb";
+import HeaderSearch from "./HeaderSearch";
+import HeaderBadge from "./HeaderBadge";
 
 import './Header.scss'
 // import NavMenuCategory from "./NavMenuCategory";
@@ -11,9 +12,10 @@ import './Header.scss'
 const Header = () => {
   const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장 
   const [ScrollActive, setScrollActive] = useState(false);
-  const HeaderHeight = useRef(0);
+  const HeaderHeight = useRef();
+  
   const handleScroll = () => {
-    if (ScrollY > (HeaderHeight.current.clientHeight - 60)) {
+    if (ScrollY > (HeaderHeight.current.clientHeight - 56)) {
       setScrollY(window.pageYOffset);
       setScrollActive(true);
     } else {
@@ -29,7 +31,7 @@ const Header = () => {
   return (
     <header id="header" ref={HeaderHeight}>
       <HeaderMessage />
-      <HeaderNavigation />
+      <HeaderNav />
       <div className="Header__logo">
         <h1 className="logo">
           <Link to="/">
@@ -37,14 +39,13 @@ const Header = () => {
           </Link>
         </h1>
       </div>
-      <div className="Header__gnb" id="gnb">
+      <div className={ScrollActive ? 'Header__gnb __scroll' : 'Header__gnb'} id="gnb">
         <span className="blind">메뉴</span>
         <div className={ScrollActive ? "Header-fixed__wrap -fixed" : "Header-fixed__wrap"}>
-          <div className="Header-gnb__wrap">
-            <ul>
-              <HeaderGNB />
-              <HeaderMenuCategory />
-            </ul>
+          <div className="Header-gnb__Wrapper">
+            <HeaderGnb />
+            <HeaderSearch />
+            <HeaderBadge />
           </div>
         </div>
       </div>

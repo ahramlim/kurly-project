@@ -1,8 +1,8 @@
 import React from "react";
 import axios from 'axios';
-import useAsync from '../../../useAsync';
+import useAsync from '../../useAsync';
 
-import { RECIPE_API } from '../../../config';
+import { API } from '../../config';
 
 import Slider from "react-slick";
 // Import Swiper styles
@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './Card.scss'
 
 async function getRecipe() {
-  const response = await axios.get(RECIPE_API);
+  const response = await axios.get(API+'recipe');
   return response.data;
 }
 

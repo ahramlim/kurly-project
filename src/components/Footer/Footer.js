@@ -2,7 +2,7 @@ import React from "react";
 import styles from './Footer.module.scss'
 const Footer = () => {
   return (
-    <footer className={styles.wrap}>
+    <footer className={styles.Wrapper}>
       <div className={styles.inner}>
         <div className={styles.info}>
           <div className={styles.cc__info}>
@@ -10,35 +10,35 @@ const Footer = () => {
             <div className={styles.cc__view}>
               <ul>
                 <li>
-                  <h3><span>1644-1107</span></h3>
+                  <div className={styles.cc__tit}><span>1644-1107</span></div>
                   <dl>
                     <dt>365고객센터</dt>
                     <dd>오전 7시 - 오후 7시</dd>
                   </dl>
                 </li>
                 <li>
-                  <h3><a href="#none">카카오톡 문의</a></h3>
+                  <div className={styles.cc__tit}><a href="#none">카카오톡 문의</a></div>
                   <dl>
                     <dt>365고객센터</dt>
                     <dd>오전 7시 - 오후 7시</dd>
                   </dl>
                 </li>
                 <li>
-                  <h3><a href="#none">1:1 문의</a></h3>
+                  <div className={styles.cc__tit}><a href="#none">1:1 문의</a></div>
                   <dl>
                     <dt>24시간 접수 가능</dt>
                     <dd>고객센터 운영시간에 순차적으로 답변해드리겠습니다.</dd>
                   </dl>
                 </li>
                 <li>
-                  <h3><a href="#none">대량주문 문의</a></h3>
+                  <div className={styles.cc__tit}><a href="#none">대량주문 문의</a></div>
                   <p>비회원일 경우 메일로 문의 바랍니다.</p>
                 </li>
               </ul>
             </div>
           </div>
           <div className={styles.cp__wrap}>
-            <ul className={styles.cp__menu}>
+            <ul className={styles.cp__navigation}>
               <li><a href="#none">컬리소개</a></li>
               <li><a href="#none">컬리소개영상</a></li>
               <li><a href="#none">인재채용</a></li>

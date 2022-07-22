@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-import styles from './HeaderNavigation.module.scss'
+import styles from './HeaderNav.module.scss'
 
-const HeaderNavigation = () => {
+const HeaderNav = () => {
   const [loginText, setLoginText] = useState('로그아웃');
   const navigate = useNavigate();
 
@@ -13,14 +13,13 @@ const HeaderNavigation = () => {
     navigate('/');
   }
   return (
-    <div className={styles.nav__container}>
+    <div className={styles.Wrapper}>
       <div className={styles.delivery}>
         <Link to='/'>
           <img alt="delivery" src="https://res.kurly.com/pc/service/common/2011/delivery_210801.png" />
         </Link>
       </div>
-      <nav>
-        <ul className={styles.nav__menu}>
+      <ul className={styles.menu}>
           <li>
             <Link to="/signup" className={styles.signUpColor}>
               회원가입
@@ -36,12 +35,31 @@ const HeaderNavigation = () => {
             )}
           </li>
           <li>
-            <Link to='#'>고객센터</Link>
+            <Link to='#none'>고객센터</Link>
+            <ul className={styles.cc__menu}>
+              <li>
+                <Link to='#none'>공지사항</Link>
+              </li>
+              <li>
+                <Link to='#none'>자주하는 질문</Link>
+              </li>
+              <li>
+                <Link to='#none'>1:1 문의</Link>
+              </li>
+              <li>
+                <Link to='#none'>대량주문 문의</Link>
+              </li>
+              <li>
+                <Link to='#none'>상품 제안</Link>
+              </li>
+              <li>
+                <Link to='#none'>에코포장 피드백</Link>
+              </li>
+            </ul>
           </li>
         </ul>
-      </nav>
     </div>
   )
 }
 
-export default HeaderNavigation;
+export default HeaderNav;

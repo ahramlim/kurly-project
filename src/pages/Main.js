@@ -1,16 +1,15 @@
 import React from "react";
 
-import Sticky from "./Components/Sticky"
-import Banner from "./Components/Banner"
-import CardList from "./Components/CardList"
-import RecipeList from "./Components/RecipeList"
-import RandomBanner from "./Components/RandomBanner"
+import Sticky from "../components/Sticky"
+import Banner from "../components/Main/Banner"
+import CardList from "../components/Main/CardList"
+import RecipeList from "../components/Main/RecipeList"
+import RandomBanner from "../components/Main/RandomBanner"
 
-import './Main.scss'
 
 function Main() {
   return (
-    <div id="main">
+    <>
       <Sticky />
       <Banner />
       <CardList
@@ -31,13 +30,6 @@ function Main() {
         products="data3"
         link={true}
         subtitle="평일 냉장고를 부탁해"
-        view={4}
-      />
-      <CardList
-        title="40대 고객의 구매 TOP50"
-        products="data8"
-        link={true}
-        subtitle="이번주 40대 고객이 특히 많이 구매했어요"
         view={4}
       />
       <CardList
@@ -74,12 +66,19 @@ function Main() {
         subtitle="한 달에 30만원 넘게 쓴 고객의 이번주 구매상품"
         view={4}
       />
+      <CardList
+        title="40대 고객의 구매 TOP50"
+        products="data9"
+        link={true}
+        subtitle="이번주 40대 고객이 특히 많이 구매했어요"
+        view={4}
+      />
       <RecipeList
         title="컬리의 레시피"
         view={3}
       />
       <RandomBanner number={0}/>
-    </div>
+    </>
   )
 }
 

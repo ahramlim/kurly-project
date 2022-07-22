@@ -24,17 +24,17 @@ const ScrollReset = () => {
     setBtnStatus(false);
   }
   useEffect(() => {
-    const scrollListener = () => {
-      window.addEventListener('scroll', handleFlow)
-    }
+    const scrollListener = () => window.addEventListener('scroll', handleFlow)
     scrollListener();
-    return () => {
-      window.removeEventListener('scroll', handleFlow)
-    }
+    return () => window.removeEventListener('scroll', handleFlow)
   })
 
   return (
-    <button className={`${styles.button} ${BtnStatus && styles.on}`}></button>
+    <button
+      type="button"
+      className={`${styles.button} ${BtnStatus && styles.on}`}
+      onClick={handleTop}
+    >맨 위로가기</button>
   )
 }
 export default ScrollReset;

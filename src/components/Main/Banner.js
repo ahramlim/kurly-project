@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 
-import { MAIN_BANNER_API } from '../../../config';
+import { API } from '../../config';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -19,7 +19,7 @@ export default function Banner() {
       try {
         setBanner(null);
         // loading 상태를 true 로 바꿉니다.
-        const response = await axios.get(MAIN_BANNER_API);
+        const response = await axios.get(API+'main');
         setBanner(response.data.data);
       } catch (e) {
         console.warn(console.log(e));
