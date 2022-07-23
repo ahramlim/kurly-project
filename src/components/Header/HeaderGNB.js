@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { KURLY_API } from "../../config";
 
-const HeaderGnb = () => {
+const HeaderGNB = () => {
   const [isDropDown, setIsDropDown] = useState(false);
   const [isDropDownNext, setIsDropDownNext] = useState(false);
   const [itemList, setItemList] = useState([]);
@@ -129,4 +129,4 @@ const HeaderGnb = () => {
 }
 
 
-export default HeaderGnb;
+export default HeaderGNB;

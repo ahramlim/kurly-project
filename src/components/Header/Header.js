@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import HeaderNav from "./HeaderNav";
-import HeaderGnb from "./HeaderGnb";
+import HeaderGNB from "./HeaderGNB";
 import HeaderSearch from "./HeaderSearch";
 import HeaderBadge from "./HeaderBadge";
 
@@ -43,7 +43,7 @@ const Header = () => {
         <span className="blind">메뉴</span>
         <div className={ScrollActive ? "Header-fixed__wrap -fixed" : "Header-fixed__wrap"}>
           <div className="Header-gnb__Wrapper">
-            <HeaderGnb />
+            <HeaderGNB />
             <HeaderSearch />
             <HeaderBadge />
           </div>
