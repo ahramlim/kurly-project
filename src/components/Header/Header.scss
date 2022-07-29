@@ -6,11 +6,11 @@ header {
     text-align: center;
     line-height: 42px;
     font-size: 14px;
+    transition: margin 0.4s linear 0s;
     background-color: var(--maincolor);
     &.-close {
-      animation: MsgHide .3s linear forwards;
-        @keyframes MsgHide { 100% { margin-top: -42px;}}
-      }
+      margin-top: -42px;
+    }
     a {
       position: relative;
       display: block;
@@ -63,16 +63,7 @@ header {
     }
     .Header-fixed__wrap {
       background-color: #fff;
-      &::after {
-        content: "";
-        position: absolute;
-        z-index: 299;
-        left: 0;
-        top: 56px;
-        width: 100%;
-        height: 9px;
-        background: url(https://res.kurly.com/pc/service/common/1902/bg_1x9.png) repeat-x 0 100%;
-      }
+      box-shadow: 0 3px 4px 0 rgb(0 0 0 / 7%);
       &.-fixed {
         position: fixed;
         left: 0;

@@ -16,7 +16,7 @@ const HeaderNav = () => {
     <div className={styles.Wrapper}>
       <div className={styles.delivery}>
         <Link to='/'>
-          <img alt="delivery" src="https://res.kurly.com/pc/service/common/2011/delivery_210801.png" />
+          <img alt="delivery" src="https://res.kurly.com/pc/service/common/2011/delivery_220630.png" />
         </Link>
       </div>
       <ul className={styles.menu}>

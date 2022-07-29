@@ -34,6 +34,7 @@ const Header = () => {
       <HeaderNav />
       <div className="Header__logo">
         <h1 className="logo">
+          <span className="blind">마켓컬리</span>
           <Link to="/">
             <img src="https://res.kurly.com/images/marketkurly/logo/logo_x2.png" alt="logo" />
           </Link>
